@@ -1,6 +1,5 @@
 import React from "react";
 import { useQuery } from "@apollo/client";
-import Client from "./Client";
 import { GET_PROJECTS } from "../queries/projectQueries";
 import Spinner from "./Spinner";
 import Project from "./Project";
@@ -11,7 +10,7 @@ const Projects = () => {
   if (loading) return <Spinner />;
   if (errors) return <p>Error</p>;
 
-  console.log(data);
+  // console.log(data);
   return (
     <>
       {data.projects.length > 0 ? (
