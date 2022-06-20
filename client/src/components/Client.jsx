@@ -2,10 +2,9 @@ import React from "react";
 import { useMutation } from "@apollo/client";
 import { FaTrash } from "react-icons/fa";
 import { DELETE_CLIENT } from "../mutations/clientMutations";
-import Spinner from "./Spinner";
 import { GET_CLIENTS } from "../queries/clientQueries";
 
-const ClientRow = ({ client }) => {
+const Client = ({ client }) => {
   const [deleteClient] = useMutation(DELETE_CLIENT, {
     variables: { id: client.id },
     // refetch get clients query
@@ -36,4 +35,4 @@ const ClientRow = ({ client }) => {
   );
 };
 
-export default ClientRow;
+export default Client;
